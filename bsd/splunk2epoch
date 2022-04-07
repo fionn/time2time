@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -eu
+
+splunktime="${1:-$(</dev/stdin)}"
+date -juf "%Y-%m-%d %T." "$splunktime" +%s 2>/dev/null

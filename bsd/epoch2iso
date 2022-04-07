@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -eu
+
+epoch="${1:-$(</dev/stdin)}"
+date -jur "$epoch" +%FT%TZ
